@@ -86,7 +86,7 @@ export default function AgentForm({
 
       if (mode === "create") {
         setName(""); setRole(""); setSystemPrompt("");
-        setTools([]); setChannels([]); setSchedule(""); setGuardrailQuery("");
+        setTools([]); setChannels([]); setGuardrailQuery("");
       }
     } finally {
       setSaving(false);
