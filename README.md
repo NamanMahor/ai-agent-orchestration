@@ -70,22 +70,24 @@ To integrate a new channel (e.g. Slack or Discord):
 2. Define the webhook endpoint in `backend/api/webhooks/` to receive incoming messages.
 
 ##  To Setup LLM Ollama for testing 
-1. Install and Start Ollama
-brew install ollama
-2. Start Ollama as a background service:
-brew services start ollama
-3. Pull the Llama 3.1 model:
-ollama pull llama3.1
+1. Install and Start Ollama 
+`brew install ollama`
+2. Start Ollama as a background service: 
+`brew services start ollama`
+3. Pull the Llama 3.1 model: 
+`ollama pull llama3.1`
 
 ##  To Setup ngrok for telegram webhook for local testing
-1. Install ngrok:
-brew install ngrok
-2. Add your ngrok authentication token:
-ngrok config add-authtoken <NGROK_AUTH_TOKEN>
-3. Start an ngrok tunnel (replace 8080 with your application's port):
-ngrok http 8080
+1. Install ngrok: 
+`brew install ngrok`
+2. Add your ngrok authentication token: 
+`ngrok config add-authtoken <NGROK_AUTH_TOKEN>`
+3. Start an ngrok tunnel (replace 8080 with your application's port): 
+`ngrok http 8080`
 Copy the generated HTTPS URL (for example, https://...ngrok-free.dev).
 4. Below config in backend/.env
+```
 TELEGRAM_BOT_TOKEN=
 TELEGRAM_BOT_CHAT_ID=
 PUBLIC_WEBHOOK_URL=
+```
